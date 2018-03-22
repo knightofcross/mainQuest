@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Список</title>
+	<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+	<form action="" method="get" name="go">
+		<input type="text" class="form-control" placeholder="Введите имя студента здесь" value="" name="search" type="text" size="40">
+	</form>
+
+	<table class="table table-striped">
+		<tr>
+			<td>Имя</td>
+			<td>Фамилия</td>
+			<td>Пол</td>
+			<td>Группа</td>
+			<td>e-mail</td>
+			<td>Баллы</td>
+			<td>Место жительства</td>
+			<td>Год рождения</td>
+		</tr>
+
+		<?php foreach ($notes as $i => $note) : ?>
+		<tr>
+			<td><?= $note->name ?></td>
+			<td><?= $note->surname ?></td>
+			<td><?= $note->gender ?></td>
+			<td><?= $note->groupNumber ?></td>
+			<td><?= $note->email ?></td>
+			<td><?= $note->pointsInput ?></td>
+			<td><?= $note->livePlace ?></td>
+			<td><?= $note->yearChoose ?></td>
+		</tr>
+		<?php endforeach; ?>
+	</table>
+</body>
+</html>
