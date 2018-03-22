@@ -19,10 +19,10 @@ class Note
     	$this->name = $note['name'];
     	$this->surname = $note['surname'];
     	$this->gender = $note['gender'];
-    	$this->groupNumber = $note['groupNumber'];
+    	$this->groupNumber = $note['group'];
     	$this->email = $note['email'];
-    	$this->yearChoose = $note['yearChoose'];
-    	$this->pointsInput = $note['pointsInput'];
+    	$this->yearChoose = $note['birthYear'];
+    	$this->pointsInput = $note['points'];
     	$this->livePlace = $note['livePlace'];
     }
 }

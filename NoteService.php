@@ -54,6 +54,7 @@ class NoteService {
 		}
 		// Разбить в ассоциативный массив
 		$data = $result->fetch_all(MYSQLI_ASSOC);
+		var_dump($data);
 		foreach ($data as $value) {
 			$note = new Note;
 			$note->setValues($value);
